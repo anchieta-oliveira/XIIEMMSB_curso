@@ -31,4 +31,16 @@ O dataset do dia 2 fica em `D02/data/`:
 - `xyz/` — geometrias de pares de moléculas com distâncias variadas (ex.:
   `22_AcOH_Uracil_1.xyz`, `1.05`, `1.10`, `1.25`, `1.5`, `2` Å);
 - `orca_inp/` — entradas ORCA correspondentes (`B3LYP 6-31G*`, Mulliken nas saídas);
-- `pbds/` — estrutura de referência em PDB.
+- `pbds/` — estrutura de referência e PDBs por distância;
+- `AcOH_Uracil_result/<distância>/` — resultados MOPAC por distância (`.mop`, `.out`,
+  `.aux`, `.arc`): gabarito da preparação dos arquivos e origem dos `--qm` do IEDA.
+
+### Tabela do dia 2 (ΔE × IED)
+
+`D02/scores_S66.csv`: ΔE de referência (MP2/cc-pVTZ com correção de counterpoise) e a
+coluna `IED` a ser preenchida pelos alunos com o `IEDA two_sel`.
+
+```{csv-table}
+:file: ../D02/scores_S66.csv
+:header-rows: 1
+```

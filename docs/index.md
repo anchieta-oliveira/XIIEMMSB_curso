@@ -16,7 +16,5 @@ dias/d01
 dias/d02
 dias/d03
 dias/d04
-tutoriais/preparacao
-tutoriais/run_ieda
 dados
 ```
