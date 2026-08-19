@@ -1,8 +1,7 @@
-# XII EMMSB 2026 — Energia Livre de Ligação e Caracterização do Reconhecimento Molecular por Cálculos Quânticos
+# XII EMMSB 2026
 
 Bem-vindo ao material do curso de quatro dias da XII EMMSB 2026. Aqui você encontra o
-roteiro das aulas, os tutoriais passo a passo e os dados usados nas análises de
-**energia livre de ligação** (ΔG) e **densidade eletrônica intermolecular** em complexos
+roteiro das aulas, os tutoriais passo a passo e os dados usados nas análises de  **densidade eletrônica intermolecular** em complexos
 proteína-ligante, usando cálculos quânticos semi-empíricos (MOPAC) e a análise IEDA.
 
 O curso é totalmente prático: cada dia tem tutoriais e datasets prontos, e todo o
