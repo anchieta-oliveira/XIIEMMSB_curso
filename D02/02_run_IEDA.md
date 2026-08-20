@@ -77,10 +77,19 @@ A tabela `scores_S66.csv` já traz o ΔE de referência (MP2/cc-pVTZ em kcal/mol
 
 Com a coluna MP2 e as distâncias, plote ΔE (kcal/mol) contra a distância. Espere um mínimo em ~1.0–1.1 (máxima interação, ponte de hidrogênio C=O···H–N) e ΔE subindo em direção a zero conforme o par se separa.
 
-### 5.2 IED × distância (correlação)
+### 5.2 IED (correlação com ΔE)
 
 Plote o IED (sua coluna) contra a energia calculada com MP2/cc-pVTZ CP (kcal/mol). A densidade eletrônica intermoelcualr deve acompanhar a interação.
 
+### 5.3 Regressão IED × ΔE (`plot_regression.py`)
+
+O script `plot_regression.py` (na pasta `D02/`) lê o `scores_S66.csv`, ajusta a regressão linear e calcula o coeficiente de correlação de Pearson **R** e o valor de *p* entre o ΔE de referência e o IED:
+
+```bash
+python plot_regression.py
+```
+
+O gráfico é salvo como `reg_IED_vs_MP2.png` (dpi=600): quanto maior a densidade eletrônica intermolecular (IED), mais negativa a energia de interação.
 
 ```{note}
 Gráficos
@@ -93,3 +102,4 @@ Gráficos
 - [ ] Coluna `IED` do `scores_S66.csv` preenchida com os valores do `two_sel`.
 - [ ] IED decrescente com a distância (no mínimo, sem valores anômalos entre distâncias vizinhas).
 - [ ] Correlação ΔE × IED negativa (IED alto ⇔ ΔE mais negativo).
+- [ ] `python plot_regression.py` roda sem erros e gera `reg_IED_vs_MP2.png` com R e *p* anotados.
