@@ -1,10 +1,10 @@
-# Calcular a Densidade Eletrônica Intermolecular e a Curva de Dissociação
+# Calcular a Densidade Eletrônica Intermolecular
 
-Cálculo do **IED (Interacting Electron Density)** entre o ácido acético (cadeia A) e a uracila (cadeia B) nas seis distâncias do dia 2, preenchimento do `scores_S66.csv` e análise da **curva de dissociação** do dímero.
+Cálculo do **IED (Interacting Electronic Density)** entre o ácido acético (cadeia A) e a uracila (cadeia B), preenchimento do `scores_S66.csv` e análise da **curva de dissociação** do dímero.
 
 ## 1. Objetivo
 
-Para cada distância (1.00, 1.05, 1.10, 1.25, 1.50, 2.00 Å) queremos a **densidade eletrônica compartilhada entre as duas moléculas**, medida pelo IEDA. O valor entra na coluna `IED` do `scores_S66.csv`, que guarda também o ΔE da dissociação pela energia de referência `MP2/cc-pVTZ CP`. Com isso montamos:
+Para cada distância (1.00, 1.05, 1.10, 1.25, 1.50, 2.00) queremos a **densidade eletrônica intermolecualr entre as duas moléculas**, calculada pelo IEDA. O valor entra na coluna `IED` do `scores_S66.csv`, que guarda também o ΔE da dissociação pela energia de referência `MP2/cc-pVTZ CP`. Com isso montamos:
 
 - a **curva de dissociação**: ΔE × distância;
 - o **compartilhamento × distância**: IED × distância;
@@ -12,7 +12,7 @@ Para cada distância (1.00, 1.05, 1.10, 1.25, 1.50, 2.00 Å) queremos a **densid
 
 ### O que é o IED?
 
-O IED é a medida de **quanto da densidade eletrônica de um sistema é compartilhada entre dois fragmentos**. Ele é obtido a partir do resultado do cálculo quântico (o arquivo `.aux`, com as cargas/índices de população) e da geometria (o PDB, que define onde estão os átomos de cada fragmento). A ferramenta **IEDA** faz esse particionamento e devolve o valor do IED para a seleção escolhida — no nosso caso, entre as duas moléculas.
+O IED é a medida de **quanto da densidade eletrônica de um sistema é compartilhada entre dois fragmentos**. Ele é obtido a partir do resultado do cálculo quântico (o arquivo `.aux`) e da geometria (o PDB, que define onde estão os átomos de cada fragmento). A ferramenta **IEDA** faz esse particionamento e devolve o valor do IED para a seleção escolhida, no nosso caso, entre as duas moléculas.
 
 ## 2. Pré-requisitos
 
@@ -22,7 +22,7 @@ O IED é a medida de **quanto da densidade eletrônica de um sistema é comparti
 
 ## 3. Cálculo do IED AcOH–uracila (`two_sel`)
 
-As duas moléculas estão em cadeias distintas (A = ácido acético, B = uracila), então o IED intermolecular é dado pelo `two_sel` entre `resid 1` e `resid 2`:
+As duas moléculas estão em cadeias distintas (A = ácido acético, B = uracila), então o IED intermolecular é dado pelo `two_sel` entre `resid 1` e `resid 2` ou `chain A` e `chain B`:
 
 ```bash
 # d = 1.00 
@@ -60,7 +60,7 @@ Explicação dos argumentos:
 
 ## 4. Preenchimento do CSV
 
-A tabela `scores_S66.csv` já traz o ΔE de referência (MP2/cc-pVTZ com correção de *counterpoise*, em kcal/mol). Complete a coluna `IED` — ela fica vazia de propósito no modelo entregue:
+A tabela `scores_S66.csv` já traz o ΔE de referência (MP2/cc-pVTZ em kcal/mol). Complete a coluna `IED` — ela fica vazia de propósito no modelo entregue:
 
 | nome | MP2/cc-pVTZ CP (kcal/mol) | IED (coluna a preencher) |
 |---|---|---|
@@ -77,13 +77,10 @@ A tabela `scores_S66.csv` já traz o ΔE de referência (MP2/cc-pVTZ com correç
 
 Com a coluna MP2 e as distâncias, plote ΔE (kcal/mol) contra a distância. Espere um mínimo em ~1.0–1.1 (máxima interação, ponte de hidrogênio C=O···H–N) e ΔE subindo em direção a zero conforme o par se separa.
 
-### 5.2 IED × distância
+### 5.2 IED × distância (correlação)
 
-Plote o IED (sua coluna) contra a mesma distância. O compartilhamento de densidade eletrônica deve acompanhar a interação: **maior IED no contato, menor com a separação**.
+Plote o IED (sua coluna) contra a energia calculada com MP2/cc-pVTZ CP (kcal/mol). A densidade eletrônica intermoelcualr deve acompanhar a interação.
 
-### 5.3 ΔE × IED (correlação)
-
-Relacione ΔE × IED ponto a ponto: mais densidade eletrônica compartilhada (IED alto) ⇔ interação mais forte (ΔE mais negativo) — correlação negativa.
 
 ```{note}
 Gráficos
