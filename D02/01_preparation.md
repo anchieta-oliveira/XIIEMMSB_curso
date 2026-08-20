@@ -8,7 +8,7 @@ Gerando o dataset de pequenas moléculas do dia 2: o dímero **ácido acético (
 
 Para estudar a **curva de dissociação**, o par é preparado em 6 separações:
 
-| Distância (Å) | Pasta de resultados |
+| Distância | Pasta de resultados |
 |---|---|
 | 1.00 | `AcOH_Uracil_result/AcOH_Uracil_1/` |
 | 1.05 | `AcOH_Uracil_result/AcOH_Uracil_1_05/` |
@@ -17,8 +17,6 @@ Para estudar a **curva de dissociação**, o par é preparado em 6 separações:
 | 1.50 | `AcOH_Uracil_result/AcOH_Uracil_1_5/` |
 | 2.00 | `AcOH_Uracil_result/AcOH_Uracil_2/` |
 
-
-> **Atenção às convenções de nome:** nas pastas de resultado a distância usa sublinhado (`AcOH_Uracil_1_05`), nos arquivos `xyz` pode aparecer ponto (`22_AcOH_Uracil_1.05.xyz`). Mantenha o padrão do que você está editando.
 
 ## 2. Montando o arquivo `.mop`
 
@@ -32,15 +30,16 @@ PM6-D3H4 ALLVEC VECTOR LARGE MOZYME AUX eps=78.4 PDB 1SCF
 
 | Palavra-chave | Significado |
 |---|---|
-| `PM6-D3H4` | Método semi-empírico PM6 com a correção de dispersão D3H4 |
-| `ALLVEC` | Usar todos os orbitais de valência (exigido para elementos mais pesados) |
-| `VECTOR` | Gravar os vetores (orbitais) no arquivo de saída |
-| `LARGE` | Saída ampliada (mais detalhes por iteração) |
-| `MOZYME` | *Linear scaling* – divide o sistema em regiões locais, acelerando o cálculo |
-| `AUX` | Gerar o arquivo auxiliar `.aux` (contém as cargas usadas nas análises) |
-| `eps=78.4` | Solvente implícito: água (constante dielétrica 78,4) |
-| `PDB` | Lê e devolve os átomos em formato PDB |
-| `1SCF` | Cálculo de ponto único (sem otimização de geometria) |
+| [`PM6-D3H4`](https://openmopac.net/Manual/pm6_d3h4.html) | Método PM6 com correções para dispersão (D3) e ligações de hidrogênio (H4). |
+| [`ALLVEC`](https://openmopac.net/Manual/allvec.html) | Imprime todos os orbitais moleculares (MOs). |
+| [`VECTORS`](https://openmopac.net/Manual/vectors.html) | Imprime energias e coeficientes dos orbitais moleculares. |
+| [`LARGE`](https://openmopac.net/Manual/large.html) | Aumenta a quantidade de informações na saída e em arquivos auxiliares. |
+| [`MOZYME`](https://openmopac.net/Manual/mozyme.html) | Usa orbitais localizados para acelerar cálculos de sistemas grandes. |
+| [`AUX`](https://openmopac.net/Manual/auxiliary.html) | Gera o arquivo `.aux` com dados eletrônicos e estruturais do cálculo. |
+| [`EPS=78.4`](https://openmopac.net/Manual/eps.html) | Define solvente implícito com constante dielétrica 78,4, típica da água. |
+| [`PDB`](https://openmopac.net/Manual/pdb.html) | Indica que a geometria está no formato PDB. |
+| [`1SCF`](https://openmopac.net/Manual/one_scf.html) | Executa cálculo de ponto único, sem otimização da geometria. |
+
 
 ### 2.2 Os cartões de átomo
 
@@ -55,18 +54,7 @@ ATOM     13  N1  URA B   2       3.337   0.202   2.404  1.00  0.00           N
 END
 ```
 
-Campos de cada cartão, na ordem:
-
-1. `ATOM` + número serial (1, 2, 3, ...);
-2. nome do átomo (`C1`, `O1`, `N1`, `H1`, ...);
-3. nome do resíduo (`ACY` ou `URA`) e o número do resíduo;
-4. **cadeia** (`A` ou `B`) — é ela que separa as duas moléculas para a análise de interação do próximo tutorial;
-5. coordenadas `x y z` (Å), preservadas da geometria;
-6. ocupância `1.0`;
-7. **carga na coluna do fator B** — comece com `0.0` se ainda não houver cargas de um cálculo prévio;
-8. `PROT` e a coluna do elemento (`C`, `O`, `N`, `H`) no fim da linha.
-
-O arquivo termina com a linha `END`. No total são **20 cartões** `ATOM` (8 do ácido acético + 12 da uracila).
+O arquivo termina com a linha `END`. No total são **20 átomos** (`ATOM`) (8 do ácido acético + 12 da uracila).
 
 ## 3. Executando o cálculo
 
@@ -82,18 +70,16 @@ Arquivos gerados:
 |---|---|
 | `*.out` | Log completo; `FINAL HEAT OF FORMATION` (kcal/mol) |
 | `*.aux` | Arquivo auxiliar com as cargas (usado pelo IEDA no próximo tutorial) |
-| `*.arc` | Geometria final em formato ARC |
+| `*.arc` | Arquivo de saída de arquivamento (geometria/estrutura resultante). |
 
 ## 4. Checklist
 
 Antes de executar:
 
-- [ ] Cada molécula está em uma cadeia (`ACY A 1`, `URA B 2`) e o arquivo termina com `END`.
 - [ ] 20 `ATOM` (8 do ácido acético + 12 da uracila).
 - [ ] Sem águas, íons ou moléculas extras na entrada.
 
 Depois de executar:
 
-- [ ] `FINAL HEAT OF FORMATION` presente no `.out` (ex.: -180.36 kcal/mol em 1.00 Å, -23.72 em 2.00 Å).
+- [ ] `FINAL HEAT OF FORMATION` presente no `.out` (ex.: -180.36 kcal/mol em 1.00, -23.72 em 2.00).
 - [ ] `.aux` gerado corretamente.
-- [ ] O calor de formação **fica menos negativo** com o aumento da distância (menos interação).
