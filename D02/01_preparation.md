@@ -43,7 +43,7 @@ PM6-D3H4 ALLVEC VECTOR LARGE MOZYME AUX eps=78.4 PDB 1SCF
 
 ### 2.2 Os cartões de átomo
 
-Cada átomo é uma linha com a anatomia de um registro `ATOM` de PDB. As duas moléculas ficam em **cadeias distintas** — ácido acético = cadeia `A`, resíduo 1; uracila = cadeia `B`, resíduo 2:
+Cada átomo é uma linha com `ATOM`. As duas moléculas ficam em **cadeias distintas** — ácido acético = cadeia `A`, resíduo 1; uracila = cadeia `B`, resíduo 2:
 
 ```
 ATOM      1  C1  ACY A   1      -1.114   1.327   0.275  1.00  0.00           C
