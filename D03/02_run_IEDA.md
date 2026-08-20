@@ -78,19 +78,17 @@ R² = 0.999978321, R = -0.999989161.
 
 ## 5. Interpretação da correlação
 
-- Maior densidade eletrônica intermolecular no complexo proteína-ligante apresenta correlação com afinidade molecular (expressa pelo ΔG de ligação) .
-- O ΔG de ligação mais negativo (`4h3g` > `4ha5` > `3bra`) acompanha o **maior IEDA** — correlação negativa (R ≈ -1).
-- O sistema com maior densidade eletrônica intermolecular (4h3g) é o de ΔG de ligação mais negativo.
+### 5.1 Regressão ΔG × IEDA (`plot_regression.py`)
 
-## 6. Extra: mapa 3D do IED (visualização)
-
-Com o resultado `matrix`, a ferramenta gera a matriz IED (`IED_mulliken.npy`). Para representar a densidade eletrônica intermolecular por átomo no PyMOL/VMD:
+O script `plot_regression.py` (na pasta `D03/`) lê o `scores_BSI.csv`, ajusta a regressão linear entre o ΔG de ligação experimental e o IED, calcula o coeficiente de correlação de Pearson **R** e o valor de *p*, e rotula cada ponto com o PDB:
 
 ```bash
-IEDA map_3D --pdb 4h3g_10Q_qm.pdb --ied IED_mulliken.npy --intrachain False
+python plot_regression.py
 ```
 
-- `--intrachain False` considera **apenas** o IED entre cadeias diferentes (A e X). O mapa faz a coloração nos átomos do ligante que compartilha mais densidade eletrônica com a proteína;
-- o valor de IED de cada átomo é gravado na **coluna beta** do PDB de saída e pode ser colorido por esse valor no visualizador.
+O gráfico é salvo como `reg_DG_vs_IEDA.png`: quanto maior a densidade eletrônica intermolecular entre proteína e ligante, mais negativo o ΔG de ligação.
 
-Isso é o ponto de partida para os plots do dia 4.
+- Maior densidade eletrônica intermolecular no complexo proteína-ligante apresenta correlação com afinidade molecular (expressa pelo ΔG de ligação) .
+- O ΔG de ligação mais negativo (`4h3g` > `4ha5` > `3bra`) acompanha o **maior IED**.
+- O sistema com maior densidade eletrônica intermolecular (4h3g) apresenta ΔG de ligação mais negativo.
+
