@@ -19,6 +19,7 @@ installation
 
 ```{toctree}
 :maxdepth: 1
+:titlesonly:
 :caption: Dias do curso
 
 dias/d01
