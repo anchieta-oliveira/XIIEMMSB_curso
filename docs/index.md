@@ -1,17 +1,21 @@
 # XII EMMSB 2026
 
-Bem-vindo ao material do curso de quatro dias da XII EMMSB 2026. Aqui você encontra o
-roteiro das aulas, os tutoriais passo a passo e os dados usados nas análises de  **densidade eletrônica intermolecular** em complexos
-proteína-ligante, usando cálculos quânticos semi-empíricos (MOPAC) e a análise IEDA.
+## Energia Livre de Ligação e Caracterização do Reconhecimento Molecular por Cálculos Quânticos
 
-O curso é totalmente prático: cada dia tem tutoriais e datasets prontos, e todo o
-conteúdo também está no repositório em `D01`–`D04`.
+Material didático do curso da XII Escola de Modelagem Molecular e Simulação
+BioMolecular (XII EMMSB 2026). O curso apresenta uma abordagem prática para o
+estudo de complexos moleculares usando cálculos quânticos semiempíricos com
+**MOPAC** e análise da densidade eletrônica intermolecular com **IEDA**.
+
+O curso é totalmente prático: cada dia tem tutoriais e datasets prontos, e todo
+o conteúdo também está no repositório em `D01`–`D04`.
 
 ```{toctree}
 :maxdepth: 2
 :caption: Curso
 
 roteiro
+installation
 dias/d01
 dias/d02
 dias/d03
