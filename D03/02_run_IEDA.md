@@ -14,9 +14,16 @@ Para cada sistema (`3bra`/AEF, `4ha5`/13W, `4h3g`/10Q) queremos a **quantidade d
   - `*_qm.mop` — entrada do MOPAC (não precisa mais, o `.aux` já saiu dela);
   - `*_qm.pdb` — saída do MOPAC em formato PDB, com a **mesma ordem e numeração de átomos do `.aux`** (é o `--pdb`).
 
+
 > **Importante:** o `--pdb` e o `--qm` devem descrever o *mesmo* sistema, na *mesma* ordem de átomos. Por isso usamos sempre o `*_qm.pdb` (saída) e o `*_qm.aux` (saída) gerados juntos.
 
 ## 3. Cálculo do IED proteína–ligante (`two_sel`)
+
+Gre o arquivo auxiliar do complexo `3bra/AEF`, por exemplo, com:
+
+```bash
+mopac ../D03/data/3bra/3bra_AEF_qm.mop
+```
 
 Para cada sistema, execute na pasta `data/<pdb>/`:
 
@@ -35,7 +42,7 @@ Explicação dos argumentos:
 
 | Argumento | Valor usado | Papel |
 |---|---|---|
-| `--pdb` | `<pdb>_<lig>_qm.pdb` | Geometria (PDB de saída do MOPAC) |
+| `--pdb` | `<pdb>_<lig>_qm.pdb` | Geometria (PDB) |
 | `--qm` | `<pdb>_<lig>_qm.aux` | Resultado do cálculo QM (MOPAC) com a densidade eletrônica |
 | `--qm_sof` | `mopac` | Software do cálculo QM (nosso caso é MOPAC; o exemplo genérico usa `orca`) |
 | `--sel_a` | `"chain A"` | Primeira seleção: a proteína |
