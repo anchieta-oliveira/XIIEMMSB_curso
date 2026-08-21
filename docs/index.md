@@ -11,14 +11,24 @@ O curso é totalmente prático: cada dia tem tutoriais e datasets prontos, e tod
 o conteúdo também está no repositório em `D01`–`D04`.
 
 ```{toctree}
-:maxdepth: 2
 :caption: Curso
 
 roteiro
 installation
+```
+
+```{toctree}
+:maxdepth: 1
+:caption: Dias do curso
+
 dias/d01
 dias/d02
 dias/d03
 dias/d04
+```
+
+```{toctree}
+:caption: Material de apoio
+
 dados
 ```

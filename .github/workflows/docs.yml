@@ -3,7 +3,13 @@ name: docs
 on:
   push:
     branches: [main]
-    paths: [docs/**, .github/workflows/docs.yml]
+    paths:
+      - docs/**
+      - D01/**
+      - D02/**
+      - D03/**
+      - D04/**
+      - .github/workflows/docs.yml
   workflow_dispatch:
 
 permissions:
