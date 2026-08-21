@@ -1,4 +1,2 @@
-# Instalação das ferramentas
-
-```{include} ../../installation.md
+```{include} ../installation.md
 ```
