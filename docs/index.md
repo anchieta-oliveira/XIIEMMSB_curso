@@ -11,13 +11,6 @@ O curso é totalmente prático: cada dia tem tutoriais e datasets prontos, e tod
 o conteúdo também está no repositório em `D01`–`D04`.
 
 ```{toctree}
-:caption: Curso
-
-roteiro
-installation
-```
-
-```{toctree}
 :maxdepth: 1
 :titlesonly:
 :caption: Dias do curso
