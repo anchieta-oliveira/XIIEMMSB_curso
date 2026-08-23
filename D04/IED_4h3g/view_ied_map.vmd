@@ -1,0 +1,55 @@
+# Visualizacao do mapa IED gerado pelo IEDA.
+
+set script_file [info script]
+if {$script_file eq ""} {
+    set script_dir [pwd]
+} else {
+    set script_dir [file dirname [file normalize $script_file]]
+}
+
+set map_files [glob -nocomplain -directory $script_dir *_IED_map.pdb]
+if {[llength $map_files] == 0} {
+    error "Nenhum arquivo *_IED_map.pdb encontrado em $script_dir. Gere o mapa com IEDA map_3D antes de abrir o VMD."
+}
+if {[llength $map_files] > 1} {
+    error "Mais de um arquivo *_IED_map.pdb encontrado em $script_dir. Deixe somente o mapa deste sistema."
+}
+
+set map_file [file normalize [lindex $map_files 0]]
+mol new $map_file type pdb first 0 last -1 step 1 filebonds 1 autobonds 1 waitfor all
+set mol_id [molinfo top]
+
+# Usa a mesma faixa centrada em zero para todos os sistemas.
+set beta_min -0.01
+set beta_max 0.01
+
+mol delrep 0 $mol_id
+
+mol representation NewCartoon 0.3 10.0 4.1 0.0
+mol color Beta
+mol selection {chain A}
+mol material Opaque
+mol addrep $mol_id
+
+mol representation Licorice 0.18 12.0 12.0
+mol color Beta
+mol selection {chain X}
+mol material Opaque
+mol addrep $mol_id
+
+# Destaca os residuos da proteina a ate 5 A do ligante.
+mol representation Licorice 0.18 12.0 12.0
+mol color Beta
+mol selection {chain A and same residue as (within 5 of chain X)}
+mol material Opaque
+mol addrep $mol_id
+
+mol scaleminmax $mol_id 0 $beta_min $beta_max
+mol scaleminmax $mol_id 1 $beta_min $beta_max
+mol scaleminmax $mol_id 2 $beta_min $beta_max
+color scale method RWB
+display projection Orthographic
+display depthcue off
+axes location Off
+display resetview
+mol rename $mol_id [file tail $map_file]
