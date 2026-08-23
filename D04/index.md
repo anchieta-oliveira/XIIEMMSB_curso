@@ -187,7 +187,6 @@ PDB usado no cálculo.
 - [ ] O comando `IEDA matrix` terminou sem erro.
 - [ ] O arquivo `<prefixo>_matrix_IED_mulliken.npy` foi criado.
 - [ ] As dimensões da matriz correspondem ao número de átomos do PDB.
-- [ ] A matriz é simétrica.
 - [ ] O PDB do mapa 3D foi aberto no VMD.
 - [ ] O heatmap por átomo foi gerado.
 - [ ] O heatmap por resíduo foi gerado.
