@@ -111,6 +111,17 @@ Abra o PDB gerado no VMD 2:
 vmd2 IED_3bra/3bra_AEF_IED_map.pdb
 ```
 
+Para abrir o mesmo mapa com a configuração pronta de visualização, use o script
+VMD da pasta do sistema:
+
+```bash
+vmd2 -e IED_3bra/view_ied_map.vmd
+```
+
+O script localiza automaticamente o arquivo `*_IED_map.pdb` na própria pasta,
+exibe a proteína pela cadeia `A`, o ligante pela cadeia `X` e colore os átomos
+usando a coluna `Beta`.
+
 No VMD, selecione a representação `NewCartoon` para a proteína e use o campo
 `Beta` como critério de coloração. Para visualizar os valores de forma mais
 clara, também é possível usar `Licorice` ou `VDW` na região do ligante.
@@ -180,6 +191,13 @@ Os arquivos resultantes serão `IED_4ha5/IED_4ha5_matrix_IED_mulliken.npy` e
 `map_3D` e `plot_heatmap` correspondentes. Não misture a matriz de um sistema
 com o PDB de outro: a ordem dos átomos da matriz deve ser exatamente a mesma do
 PDB usado no cálculo.
+
+Depois de gerar os respectivos PDBs de mapa, abra-os com os scripts:
+
+```bash
+vmd2 -e IED_4ha5/view_ied_map.vmd
+vmd2 -e IED_4h3g/view_ied_map.vmd
+```
 
 ## 6. Checklist
 
