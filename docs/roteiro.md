@@ -25,4 +25,3 @@ Resumo dos quatro dias da XII EMMSB 2026.
 
 - Representação 3D.
 - Heatmap.
-- Gráfico por orbital.

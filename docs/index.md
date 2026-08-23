@@ -24,5 +24,7 @@ dias/d04
 ```{toctree}
 :caption: Material de apoio
 
+roteiro
+installation
 dados
 ```

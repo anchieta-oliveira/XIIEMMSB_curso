@@ -28,12 +28,13 @@ preenchimento do zero.
 
 O dataset do dia 2 fica em `D02/data/`:
 
-- `xyz/` — geometrias de pares de moléculas com distâncias variadas (ex.:
-  `22_AcOH_Uracil_1.xyz`, `1.05`, `1.10`, `1.25`, `1.5`, `2` Å);
+- `xyz/` — geometrias de pares de moléculas com os seis fatores de separação do
+  exercício (`1.00`, `1.05`, `1.10`, `1.25`, `1.50` e `2.00`);
 - `orca_inp/` — entradas ORCA correspondentes (`B3LYP 6-31G*`, Mulliken nas saídas);
 - `pbds/` — estrutura de referência e PDBs por distância;
-- `AcOH_Uracil_result/<distância>/` — resultados MOPAC por distância (`.mop`, `.out`,
-  `.aux`, `.arc`): gabarito da preparação dos arquivos e origem dos `--qm` do IEDA.
+- `AcOH_Uracil_result/<fator>/` — entradas MOPAC (`.mop`) por fator de separação.
+  Cada aluno gera localmente os arquivos `.out`, `.aux` e `.arc` ao executar o
+  MOPAC; esses arquivos alimentam o argumento `--qm` do IEDA.
 
 ### Tabela do dia 2 (ΔE × IED)
 

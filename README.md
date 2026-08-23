@@ -19,7 +19,7 @@ disponível em:
 - **Dia 1:** protonação de proteínas e ligantes e introdução aos formatos PDB e MOPAC.
 - **Dia 2:** pequenas moléculas, curva de dissociação e relação entre energia e compartilhamento eletrônico.
 - **Dia 3:** complexos proteína-ligante da beta-secretase, cálculo com IEDA e correlação com a energia livre de ligação.
-- **Dia 4:** visualização 3D, mapas de calor e análise por orbital.
+- **Dia 4:** visualização 3D e mapas de calor por átomo e por resíduo.
 
 ## Organização do repositório
 

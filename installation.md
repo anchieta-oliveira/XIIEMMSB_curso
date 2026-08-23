@@ -75,15 +75,17 @@ mkdir -p "$HOME/vmd2"
 tar -xf "$HOME/Downloads/<arquivo-baixado>" -C "$HOME/vmd2"
 ```
 
-Adicione ao `PATH` a pasta que contém o executável.
+Localize o executável instalado e adicione a pasta correspondente ao `PATH`.
 
 ```bash
-echo 'export PATH="$HOME/vmd2:$PATH"' >> "$HOME/.bashrc"
+VMD2_BIN="$(find "$HOME/vmd2" -type f -name vmd2 -perm -u+x -print -quit)"
+test -n "$VMD2_BIN" || { echo "Executável vmd2 não encontrado" >&2; return 1 2>/dev/null || exit 1; }
+echo "export PATH=\"$(dirname "$VMD2_BIN"):\$PATH\"" >> "$HOME/.bashrc"
 source "$HOME/.bashrc"
 ```
 
 ```bash
-vmd
+vmd2
 ```
 
 ### Abrir arquivos do curso
