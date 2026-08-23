@@ -43,21 +43,6 @@ Palavra por palavra:
 
 > **Importante:** não altere a linha de cabeçalho dos arquivos fornecidos. Ela define o protocolo do curso.
 
-## 3. O formato dos cartões de átomo
-
-Cada átomo é uma linha de 79 caracteres com a mesma anatomia de um registro `ATOM` de PDB:
-
-```
-ATOM      2  HN1 GLY A  58      38.123 -15.054  30.775  1.0   3.18      PROT H
-│         │  │   │   │   │      │      │      │      │     │          │     │
-│         │  │   │   │   │      x      y      z    ocup. carga     "PROT" elem.
-│         │  │   │   │   └── nº. do resíduo
-│         │  │   │   └────── cadeia (sobrenome)
-│         │  │   └────────── nome do resíduo
-│         │  └────────────── nome do átomo
-│         └───────────────── número serial
-└─────────────────────────── "ATOM"
-```
 
 ### O ligante
 
@@ -67,13 +52,13 @@ O ligante é padronizado em todas as linhas:
 - **cadeia `X`** e **nº. de resíduo 900**, para nunca colidir com a numeração da proteína;
 
 
-## 4. Passo a passo da conversão
+## 3. Passo a passo da conversão
 
-### 4.1 Obter o complexo
+### 3.1 Obter o complexo
 
 Baixe o PDB do complexo (ex.: `4h3g` no RCSB) e separe mentalmente as partes: proteína + ligante + demais partes cristalográficas (água, íons).
 
-### 4.2 Definir estados de protonação
+### 3.2 Definir estados de protonação
 
 Para o pH fisiológico do dia 1:
 
@@ -82,11 +67,11 @@ Para o pH fisiológico do dia 1:
 - O ligante também deve estar no estado de protonação correto (ex.: carga de sistema +1 nos CSVs).
 
 
-### 4.3 Montar o arquivo .mop
+### 3.3 Montar o arquivo .mop
 
 Junte: cabeçalho + linha em branco + cartões + `END`. Salve com a convenção de nomes do curso, ex.: `4h3g_10Q_qm.mop`.
 
-## 5. Executando o cálculo
+## 4. Executando o cálculo
 
 Na pasta com o `.mop`, execute:
 
@@ -101,7 +86,7 @@ Arquivos gerados:
 | `*.out` | Log completo: energia, iterações SCF, cargas, orbitais |
 | `*.aux` | Arquivo auxiliar com as cargas/índices usados nas análises posteriores |
 
-## 6. Checklist de conferência
+## 5. Checklist de conferência
 
 Antes de executar o MOPAC:
 

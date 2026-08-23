@@ -56,6 +56,18 @@ END
 
 O arquivo termina com a linha `END`. No total são **20 átomos** (`ATOM`) (8 do ácido acético + 12 da uracila).
 
+```
+ATOM      2  HN1 GLY A  58      38.123 -15.054  30.775  1.0   3.18      PROT H
+│         │  │   │   │   │      │      │      │      │     │          │     │
+│         │  │   │   │   │      x      y      z    ocup. carga     "PROT" elem.
+│         │  │   │   │   └── nº. do resíduo
+│         │  │   │   └────── cadeia (sobrenome)
+│         │  │   └────────── nome do resíduo
+│         │  └────────────── nome do átomo
+│         └───────────────── número serial
+└─────────────────────────── "ATOM"
+```
+
 ## 3. Executando o cálculo
 
 Para cada distância, na pasta do sistema:
