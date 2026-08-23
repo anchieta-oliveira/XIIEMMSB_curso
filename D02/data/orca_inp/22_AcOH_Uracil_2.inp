@@ -1,9 +1,9 @@
 !B3LYP 6-31G* TightSCF EnGrad 
 
 %MAXCORE 8000
-%PAL NPROCS 6 END
+%PAL NPROCS 4 END
 %output PrintLevel Mini Print[ P_Mulliken ] 1 Print[P_AtCharges_M] 1 end
-%output Print[ P_Basis       ] 2  Print[ P_MOs         ] 1 end
+%output Print[ P_Basis       ] 2  Print[ P_MOs         ] 1 Print[P_Overlap] 1 end
 
 %coords
   CTyp xyz
