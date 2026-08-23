@@ -26,18 +26,19 @@ Crie o ambiente Conda do curso e ative-o:
 conda create -n IEDA python=3.12
 conda activate IEDA
 ```
-
-Instale o MOPAC pelo Conda:
-
-```bash
-conda install mopac
-```
-
-Por fim, instale o IEDA a partir do próprio repositório:
+Instale o IEDA a partir do próprio repositório:
 
 ```bash
 pip install .
 ```
+
+y
+Instale o MOPAC pelo Conda:
+
+```bash
+conda install -c conda-forge mopac
+```
+
 
 Teste as duas ferramentas:
 
