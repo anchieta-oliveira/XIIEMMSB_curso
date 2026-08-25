@@ -1,0 +1,314 @@
+ *******************************************************************************
+ ** Cite this program as: MOPAC2016, Version: 22.234L, James J. P. Stewart,   **
+ **                           web-site: HTTP://OpenMOPAC.net.                 **
+ *******************************************************************************
+ **                                                                           **
+ **                                MOPAC2016                                  **
+ **                                                                           **
+ *******************************************************************************
+
+                              PM6-D3H4 CALCULATION RESULTS
+
+ *******************************************************************************
+ *  CALCULATION DONE:                                Tue Aug 25 10:04:33 2026  *
+ *  PM6-D3H4   - CORRECT DISPERSION AND HYDROGEN BOND TERMS USING THE D3H4 METHOD
+ *  START_RES  - STARTING RESIDUE NUMBERS DEFINED
+ *  Keyword:     START_RES=(1A 2B) 
+ *  CHAINS     - PDB CHAIN LETTERS EXPLICITLY DEFINED
+ *  Keyword:     CHAINS=(AB) 
+ *  PDB        - INPUT GEOMETRY IS IN PDB FORMAT
+ *  MOZYME     - USE LOCALIZED M.O.s IN SOLVING THE SCF EQUATIONS
+ *  EPS=78.4   - USE ANDREAS KLAMT'S COSMO IMPLICIT SOLVATION MODEL
+ *  1SCF       - DO 1 SCF AND THEN STOP 
+ *  T=         - A TIME OF 172800.0 SECONDS REQUESTED
+ *  DUMP=N     - RESTART FILE WRITTEN EVERY 7200.0 SECONDS REQUESTED
+ *  AUX        - OUTPUT AUXILIARY INFORMATION
+ *  VECTORS    - FINAL MOLECULAR ORBITALS TO BE PRINTED
+ *  LARGE      - EXPANDED OUTPUT TO BE PRINTED
+ *  ALLVEC     - PRINT ALL EIGENVECTORS
+ *******************************************************************************
+ START_RES=(1A 2B)  CHAINS=(AB) PM6-D3H4 ALLVEC VECTOR LARGE MOZYME AUX eps=78.4 PDB 1SCF
+
+
+   ATOM                 CHEMICAL                   X               Y               Z
+  NUMBER                 SYMBOL               (ANGSTROMS)     (ANGSTROMS)     (ANGSTROMS)
+ 
+     1       C(ATOM      1  C1  ACY A   1)   -1.11400000  *   1.32700000  *   0.27500000  *
+     2       O(ATOM      2  O1  ACY A   1)   -0.46700000  *   2.34900000  *   0.46200000  *
+     3       O(ATOM      3  O2  ACY A   1)   -0.57800000  *   0.13700000  *   0.05000000  *
+     4       H(ATOM      4  H1  ACY A   1)    0.41300000  *   0.20300000  *   0.05500000  *
+     5       C(ATOM      5  C2  ACY A   1)   -2.61100000  *   1.28600000  *   0.27700000  *
+     6       H(ATOM      6  H2  ACY A   1)   -3.00700000  *   2.27700000  *   0.46600000  *
+     7       H(ATOM      7  H3  ACY A   1)   -2.96400000  *   0.91500000  *  -0.68200000  *
+     8       H(ATOM      8  H4  ACY A   1)   -2.95300000  *   0.59200000  *   1.04100000  *
+     9       N(ATOM      9  N1  URA B   2)    4.36800000  *   1.09200000  *   0.18200000  *
+    10       H(ATOM     10  H1  URA B   2)    4.76100000  *   0.17700000  *   0.01000000  *
+    11       C(ATOM     11  C1  URA B   2)    5.28900000  *   2.14100000  *   0.36400000  *
+    12       O(ATOM     12  O1  URA B   2)    6.48600000  *   1.92200000  *   0.31100000  *
+    13       C(ATOM     13  C2  URA B   2)    4.65000000  *   3.42000000  *   0.60400000  *
+    14       H(ATOM     14  H2  URA B   2)    5.27000000  *   4.28700000  *   0.75600000  *
+    15       C(ATOM     15  C3  URA B   2)    3.30300000  *   3.50000000  *   0.63400000  *
+    16       H(ATOM     16  H3  URA B   2)    2.78000000  *   4.42800000  *   0.80900000  *
+    17       N(ATOM     17  N2  URA B   2)    2.49900000  *   2.40900000  *   0.44300000  *
+    18       H(ATOM     18  H4  URA B   2)    1.47500000  *   2.47900000  *   0.46700000  *
+    19       C(ATOM     19  C4  URA B   2)    2.99900000  *   1.15900000  *   0.20900000  *
+    20       O(ATOM     20  O2  URA B   2)    2.28700000  *   0.17000000  *   0.03600000  *
+ 
+
+ General Reference for PM6:
+ "Optimization of Parameters for Semiempirical Methods V: Modification of NDDO Approximations
+ and Application to 70 Elements", J. J. P. Stewart, J. Mol. Mod., 13, 1173-1213 (2007)
+ URL: https://link.springer.com/article/10.1007/s00894-007-0233-4
+
+           Empirical Formula: C6 H8 N2 O4  =    20 atoms
+
+
+
+      MOLECULAR POINT GROUP   :   Cs  
+
+          NO CHARGES FOUND.
+
+          COMPUTED CHARGE ON SYSTEM: +0
+
+ -------------------------------------------------------------------------------
+ START_RES=(1A 2B)  CHAINS=(AB) PM6-D3H4 ALLVEC VECTOR LARGE MOZYME AUX eps=78.4 PDB 1SCF
+
+
+
+
+     1SCF WAS SPECIFIED, SO BFGS WAS NOT USED                 
+     SCF FIELD WAS ACHIEVED                                   
+
+
+                              PM6-D3H4 CALCULATION
+                                                       MOPAC2016 (Version: 22.234L)
+                                                       Tue Aug 25 10:04:34 2026
+
+
+
+
+          FINAL HEAT OF FORMATION =       -195.33280 KCAL/MOL =    -817.27244 KJ/MOL
+          VAN DER WAALS AREA      =        199.28 SQUARE ANGSTROMS
+
+
+          SOLVATION ENERGY        =         -0.49638 EV
+
+          DIELECTRIC ENERGY       =         -0.81306 EV
+          COSMO AREA              =        199.28 SQUARE ANGSTROMS
+          COSMO VOLUME            =        191.20 CUBIC ANGSTROMS
+
+          NO. OF FILLED LEVELS    =         33
+          MOLECULAR WEIGHT        =        172.1402         POINT GROUP:  Cs  
+
+          MOLECULAR DIMENSIONS (Angstroms)
+
+            Atom       Atom       Distance
+            O    12    H     8     9.56015
+            H    16    H    10     4.53891
+            H     7    H     8     1.74431
+
+
+          SCF CALCULATIONS        =          1
+ 
+          WALL-CLOCK TIME         =      0.070 SECONDS
+          COMPUTATION TIME        =      0.033 SECONDS
+
+
+
+
+   ATOM                 CHEMICAL                   X               Y               Z
+  NUMBER                 SYMBOL               (ANGSTROMS)     (ANGSTROMS)     (ANGSTROMS)
+ 
+     1       C(ATOM      1  C1  ACY A   1)   -1.11400000  *   1.32700000  *   0.27500000  *
+     2       O(ATOM      2  O1  ACY A   1)   -0.46700000  *   2.34900000  *   0.46200000  *
+     3       O(ATOM      3  O2  ACY A   1)   -0.57800000  *   0.13700000  *   0.05000000  *
+     4       H(ATOM      4  H1  ACY A   1)    0.41300000  *   0.20300000  *   0.05500000  *
+     5       C(ATOM      5  C2  ACY A   1)   -2.61100000  *   1.28600000  *   0.27700000  *
+     6       H(ATOM      6  H2  ACY A   1)   -3.00700000  *   2.27700000  *   0.46600000  *
+     7       H(ATOM      7  H3  ACY A   1)   -2.96400000  *   0.91500000  *  -0.68200000  *
+     8       H(ATOM      8  H4  ACY A   1)   -2.95300000  *   0.59200000  *   1.04100000  *
+     9       N(ATOM      9  N1  URA B   2)    4.36800000  *   1.09200000  *   0.18200000  *
+    10       H(ATOM     10  H1  URA B   2)    4.76100000  *   0.17700000  *   0.01000000  *
+    11       C(ATOM     11  C1  URA B   2)    5.28900000  *   2.14100000  *   0.36400000  *
+    12       O(ATOM     12  O1  URA B   2)    6.48600000  *   1.92200000  *   0.31100000  *
+    13       C(ATOM     13  C2  URA B   2)    4.65000000  *   3.42000000  *   0.60400000  *
+    14       H(ATOM     14  H2  URA B   2)    5.27000000  *   4.28700000  *   0.75600000  *
+    15       C(ATOM     15  C3  URA B   2)    3.30300000  *   3.50000000  *   0.63400000  *
+    16       H(ATOM     16  H3  URA B   2)    2.78000000  *   4.42800000  *   0.80900000  *
+    17       N(ATOM     17  N2  URA B   2)    2.49900000  *   2.40900000  *   0.44300000  *
+    18       H(ATOM     18  H4  URA B   2)    1.47500000  *   2.47900000  *   0.46700000  *
+    19       C(ATOM     19  C4  URA B   2)    2.99900000  *   1.15900000  *   0.20900000  *
+    20       O(ATOM     20  O2  URA B   2)    2.28700000  *   0.17000000  *   0.03600000  *
+
+                             CARTESIAN COORDINATES
+
+   1    C       -1.114000000     1.327000000     0.275000000
+   2    O       -0.467000000     2.349000000     0.462000000
+   3    O       -0.578000000     0.137000000     0.050000000
+   4    H        0.413000000     0.203000000     0.055000000
+   5    C       -2.611000000     1.286000000     0.277000000
+   6    H       -3.007000000     2.277000000     0.466000000
+   7    H       -2.964000000     0.915000000    -0.682000000
+   8    H       -2.953000000     0.592000000     1.041000000
+   9    N        4.368000000     1.092000000     0.182000000
+  10    H        4.761000000     0.177000000     0.010000000
+  11    C        5.289000000     2.141000000     0.364000000
+  12    O        6.486000000     1.922000000     0.311000000
+  13    C        4.650000000     3.420000000     0.604000000
+  14    H        5.270000000     4.287000000     0.756000000
+  15    C        3.303000000     3.500000000     0.634000000
+  16    H        2.780000000     4.428000000     0.809000000
+  17    N        2.499000000     2.409000000     0.443000000
+  18    H        1.475000000     2.479000000     0.467000000
+  19    C        2.999000000     1.159000000     0.209000000
+  20    O        2.287000000     0.170000000     0.036000000
+
+
+           Empirical Formula: C6 H8 N2 O4  =    20 atoms
+
+          LOCALIZED MOLECULAR ORBITALS
+
+           Occupied Set
+
+  NUMBER OF CENTERS  LMO ENERGY     COMPOSITION OF ORBITALS 
+                                    (AS PERCENT OF THE LMO)
+
+   1    1.9814        -28.10352    O 20 57.76    C 19 41.36
+   2    1.9420        -27.94064    O  2 59.57    C  1 40.01
+   3    1.9670        -27.62274    O 12 58.51    C 11 40.75
+   4    1.6987        -25.76792    O  3 71.39    H  4 28.11
+   5    1.9760        -25.73806    N 17 58.27    C 19 40.81
+   6    1.9676        -25.67145    N  9 59.24    C 19 39.66
+   7    1.8792        -25.16295    O  3 63.40    C  1 36.08
+   8    1.9593        -24.62826    N 17 59.91    C 15 38.92
+   9    1.9161        -24.47577    N  9 62.50    C 11 36.23
+  10    1.8044        -23.68855    N 17 67.16    H 18 32.12
+  11    1.8148        -23.65669    N  9 66.71    H 10 32.56
+  12    2.0275        -21.83459    C 13 49.85    C 15 49.47
+  13    2.0353        -21.24090    C 13 50.19    C 11 48.93
+  14    2.0240        -20.26604    C  1 51.61    C  5 47.72
+  15    1.0528        -20.04952    O 12 97.45    C 11  1.43
+  16    1.0568        -19.98725    O  2 97.26    C  1  1.86
+  17    1.0639        -19.80729    O 20 96.93    C 19  2.02
+  18    1.9563        -19.44125    C 15 59.42    H 16 39.76
+  19    1.9424        -18.63564    C 13 60.68    H 14 38.29
+  20    1.0830        -17.91207    O  3 96.06    H  4  2.41
+  21    1.9409        -17.66869    C  5 60.00    H  6 39.40
+  22    1.9613        -17.65925    C  5 59.86    H  8 38.93
+  23    1.9614        -17.64557    C  5 59.85    H  7 38.94
+  24    1.5520        -15.47261    O 20 77.10    C 19 22.34
+  25    1.5587        -15.31943    O  2 76.74    C  1 22.95
+  26    1.5605        -15.06238    O 12 76.66    C 11 23.05
+  27    1.1642        -14.85399    O 20 92.60    C 19  3.56    N  9  1.52
+  28    1.1257        -14.29046    O  2 94.20    C  1  2.75    O  3  1.19    C  5  1.02
+  29    1.1379        -14.20690    O 12 93.66    C 11  3.64    N  9  1.16    C 13  1.09
+  30    1.2103        -13.97779    O  3 90.64    C  1  6.05    O  2  3.21
+  31    1.4870        -12.90943    N  9 81.43    C 19  6.58    C 11  5.87    O 20  3.34    O 12  2.24
+  32    1.5505        -12.87437    N 17 79.70    C 19  6.77    C 15  5.29    O 20  3.51    C 13  3.34
+  33    2.0954        -12.16592    C 13 59.58    C 15 34.79    C 11  3.25    O 12  1.29
+
+           Virtual Set (NOT re-localized!)
+
+  NUMBER OF CENTERS  LMO ENERGY     COMPOSITION OF ORBITALS 
+                                    (AS PERCENT OF THE LMO)
+
+  34    2.2237          0.07494    C 15 58.09    C 13 32.33    N 17  8.79
+  35    2.2502          0.22005    C 19 63.16    O 20 16.33    N 17  9.68    N  9  9.67    C 13  1.04
+  36    1.8997          0.29669    C  1 69.18    O  2 19.83    O  3  9.15    C  5  1.05
+  37    2.0554          0.32886    C 11 66.34    O 12 19.62    N  9  8.01    C 13  3.46    C 15  1.38
+                                   N 17  1.10
+  38    2.1537          2.44523    C 19 55.87    N 17 38.81    O 20  3.94
+  39    2.1419          2.46171    C 19 56.68    N  9 37.95    O 20  3.99
+  40    2.0730          2.56670    C  1 60.33    O  3 34.07    O  2  4.84
+  41    2.1184          2.68892    C  5 50.03    C  1 47.04    O  2  2.20
+  42    2.1286          2.73179    C 11 59.24    N  9 34.05    O 12  5.39
+  43    1.9647          2.95205    C 15 59.59    N 17 39.23
+  44    2.1358          3.09059    C 11 49.32    C 13 47.36    O 12  2.56
+  45    1.9851          3.11221    C 19 57.50    O 20 41.61
+  46    1.9939          3.59830    C  1 58.68    O  2 39.63    O  3  1.24
+  47    1.9596          3.76302    C 11 58.61    O 12 40.84
+  48    1.8110          4.10831    H  4 67.82    O  3 30.37
+  49    2.0169          4.11096    C 15 50.00    C 13 49.58
+  50    1.8521          4.51588    H 18 65.97    N 17 32.36
+  51    1.9438          4.82961    H 16 59.51    C 15 40.04
+  52    1.8461          4.90231    H 10 65.71    N  9 33.15
+  53    1.9200          5.51272    H  7 60.42    C  5 39.47
+  54    1.9198          5.51325    H  8 60.43    C  5 39.46
+  55    1.9229          5.60207    H  6 60.23    C  5 39.66
+  56    1.9143          5.68151    H 14 61.03    C 13 38.72
+
+
+              NET ATOMIC CHARGES AND DIPOLE CONTRIBUTIONS
+
+  ATOM NO.                 TYPE                        CHARGE      No. of ELECS.   s-Pop       p-Pop       
+    1          C(ATOM      1  C1  ACY A   1)           0.712560        3.2874     1.08157     2.20587
+    2          O(ATOM      2  O1  ACY A   1)          -0.649758        6.6498     1.85103     4.79872
+    3          O(ATOM      3  O2  ACY A   1)          -0.491371        6.4914     1.80115     4.69022
+    4          H(ATOM      4  H1  ACY A   1)           0.362661        0.6373     0.63734
+    5          C(ATOM      5  C2  ACY A   1)          -0.586547        4.5865     1.09855     3.48799
+    6          H(ATOM      6  H2  ACY A   1)           0.210491        0.7895     0.78951
+    7          H(ATOM      7  H3  ACY A   1)           0.218686        0.7813     0.78131
+    8          H(ATOM      8  H4  ACY A   1)           0.219036        0.7810     0.78096
+    9          N(ATOM      9  N1  URA B   2)          -0.505705        5.5057     1.50703     3.99868
+   10          H(ATOM     10  H1  URA B   2)           0.321215        0.6788     0.67878
+   11          C(ATOM     11  C1  URA B   2)           0.691252        3.3087     1.05145     2.25730
+   12          O(ATOM     12  O1  URA B   2)          -0.611977        6.6120     1.85060     4.76138
+   13          C(ATOM     13  C2  URA B   2)          -0.517416        4.5174     1.11547     3.40194
+   14          H(ATOM     14  H2  URA B   2)           0.230783        0.7692     0.76922
+   15          C(ATOM     15  C3  URA B   2)           0.208357        3.7916     1.10022     2.69143
+   16          H(ATOM     16  H3  URA B   2)           0.196487        0.8035     0.80351
+   17          N(ATOM     17  N2  URA B   2)          -0.376639        5.3766     1.46439     3.91224
+   18          H(ATOM     18  H4  URA B   2)           0.325401        0.6746     0.67460
+   19          C(ATOM     19  C4  URA B   2)           0.681894        3.3181     1.01651     2.30159
+   20          O(ATOM     20  O2  URA B   2)          -0.639409        6.6394     1.85465     4.78475
+
+          NET CHARGE ON RESIDUES
+
+      Residue         Charge  Anion or
+                              Cation?
+      ACY A   1       -0.004
+      URA B   2       +0.004
+ 
+
+
+ DIPOLE           X         Y         Z       TOTAL
+ POINT-CHG.    -6.147     3.308     0.652     7.011
+ HYBRID         0.396    -0.736    -0.135     0.847
+ SUM           -5.751     2.572     0.516     6.321
+
+
+          ATOMIC ORBITAL ELECTRON POPULATIONS
+
+                   Atom                  s        px        py        pz   
+    1  C(ATOM      1  C1  ACY A   1)   1.08157   0.85754   0.72907   0.61925
+    2  O(ATOM      2  O1  ACY A   1)   1.85103   1.72986   1.46937   1.59949
+    3  O(ATOM      3  O2  ACY A   1)   1.80115   1.41893   1.46689   1.80440
+    4  H(ATOM      4  H1  ACY A   1)   0.63734
+    5  C(ATOM      5  C2  ACY A   1)   1.09855   1.02172   1.23160   1.23467
+    6  H(ATOM      6  H2  ACY A   1)   0.78951
+    7  H(ATOM      7  H3  ACY A   1)   0.78131
+    8  H(ATOM      8  H4  ACY A   1)   0.78096
+    9  N(ATOM      9  N1  URA B   2)   1.50703   1.13051   1.24367   1.62449
+   10  H(ATOM     10  H1  URA B   2)   0.67878
+   11  C(ATOM     11  C1  URA B   2)   1.05145   0.77542   0.80877   0.67310
+   12  O(ATOM     12  O1  URA B   2)   1.85060   1.31522   1.83338   1.61278
+   13  C(ATOM     13  C2  URA B   2)   1.11547   1.04076   1.10369   1.25749
+   14  H(ATOM     14  H2  URA B   2)   0.76922
+   15  C(ATOM     15  C3  URA B   2)   1.10022   0.94120   0.93535   0.81488
+   16  H(ATOM     16  H3  URA B   2)   0.80351
+   17  N(ATOM     17  N2  URA B   2)   1.46439   1.20197   1.11895   1.59132
+   18  H(ATOM     18  H4  URA B   2)   0.67460
+   19  C(ATOM     19  C4  URA B   2)   1.01651   0.78098   0.78331   0.73730
+   20  O(ATOM     20  O2  URA B   2)   1.85465   1.64979   1.46909   1.66588
+
+ **********************
+ *                    *
+ * JOB ENDED NORMALLY *
+ *                    *
+ **********************
+
+
+
+ TOTAL JOB TIME:             0.12 SECONDS
+
+ == MOPAC DONE ==
