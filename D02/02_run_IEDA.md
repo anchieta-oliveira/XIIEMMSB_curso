@@ -41,7 +41,7 @@ IEDA two_sel --pdb pbds/22_AcOH_Uracil_1_25.pdb --qm AcOH_Uracil_result/AcOH_Ura
 IEDA two_sel --pdb pbds/22_AcOH_Uracil_1_5.pdb --qm AcOH_Uracil_result/AcOH_Uracil_1_5/22_AcOH_Uracil_1_5.aux --qm_sof mopac --sel_a "resid 1" --sel_b "resid 2"
 
 # d = 2.00 
-IEDA two_sel --pdb pbds/22_AcOH_Uracil_2.pdb --qm AcOH_Uracil_result/AcOH_Uracil_2/22_AcOH_Uracil_2.aux --qm_sof mopac --sel_a "resid 1" --sel_b "resid 1"
+IEDA two_sel --pdb pbds/22_AcOH_Uracil_2.pdb --qm AcOH_Uracil_result/AcOH_Uracil_2/22_AcOH_Uracil_2.aux --qm_sof mopac --sel_a "resid 1" --sel_b "resid 2"
 ```
 
 Anote o IED de cada distância.
