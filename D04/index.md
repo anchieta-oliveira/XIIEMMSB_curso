@@ -6,12 +6,15 @@
   do MOPAC.
 - Visualizar a densidade eletrônica por átomo em uma estrutura 3D.
 - Representar a matriz como um mapa 2D (*heatmap*).
+- Identificar resíduos que interagem com o ligante por mapas 2D orientados pela
+ referência.
 
 ## Conteúdo
 
 - Matriz de IED por par de átomos.
 - Mapa 3D no formato PDB para visualização no VMD.
 - Mapa 2D por átomo e por resíduo.
+- Mapas 2D com referência.
 
 ## 1. Preparação
 
@@ -163,6 +166,27 @@ O mapa por resíduo facilita a identificação dos resíduos da proteína que ma
 contribuem para o reconhecimento do ligante. Compare os eixos dos dois mapas
 com as seleções usadas no tutorial do Dia 3 (`chain A` e `chain X`).
 
+### 4.1 Mapas por resíduo em torno do ligante
+
+Para examinar separadamente a interação do ligante com cada resíduo da
+proteína, use `plot_heatmap_ref` com a cadeia `X` como referência. O comando
+abaixo cria um mapa para cada resíduo cuja soma de IED com o ligante seja maior
+que `0.0001`:
+
+```bash
+IEDA plot_heatmap_ref \
+  --pdb ../D03/data/3bra/3bra_AEF_qm.pdb \
+  --ied IED_3bra/IED_3bra_matrix_IED_mulliken.npy \
+  --multi_file \
+  --reference "chain X" \
+  --cutoff 0.0001
+```
+
+Com `--multi_file`, o IEDA salva um arquivo PNG para cada resíduo selecionado.
+O parâmetro `--reference "chain X"` coloca os átomos do ligante em um eixo do
+mapa, enquanto cada arquivo contém os átomos de um resíduo da proteína no outro
+eixo. Ajuste `--cutoff` para reduzir ou ampliar o conjunto de resíduos exibidos.
+
 ## 5. Repetição para os outros complexos
 
 Depois de validar o primeiro sistema, repita o mesmo fluxo para `4ha5/13W` e
@@ -188,7 +212,7 @@ IEDA matrix \
 
 Os arquivos resultantes serão `IED_4ha5/IED_4ha5_matrix_IED_mulliken.npy` e
 `IED_4h3g/IED_4h3g_matrix_IED_mulliken.npy`. Use cada matriz nos comandos
-`map_3D` e `plot_heatmap` correspondentes. Não misture a matriz de um sistema
+`map_3D`, `plot_heatmap` e `plot_heatmap_ref` correspondentes. Não misture a matriz de um sistema
 com o PDB de outro: a ordem dos átomos da matriz deve ser exatamente a mesma do
 PDB usado no cálculo.
 
