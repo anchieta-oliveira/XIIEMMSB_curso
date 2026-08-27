@@ -166,7 +166,7 @@ O mapa por resíduo facilita a identificação dos resíduos da proteína que ma
 contribuem para o reconhecimento do ligante. Compare os eixos dos dois mapas
 com as seleções usadas no tutorial do Dia 3 (`chain A` e `chain X`).
 
-### 4.1 Mapas por resíduo em torno do ligante
+### 4.1 Mapas com referência
 
 Para examinar separadamente a interação do ligante com cada resíduo da
 proteína, use `plot_heatmap_ref` com a cadeia `X` como referência. O comando
